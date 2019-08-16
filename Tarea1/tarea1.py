@@ -1,6 +1,17 @@
+########################Configuración########################
+
+windowSize = 500
+maxRandomExplosionRadius = 200
+windowColor = [0, 0, 0]
+maxRandomExplosions = 100
+
+#############################################################
+
+
 import math
 import random
 import pygame
+
 
 #Función de explosión
 def explotar(radius, xPos, yPos, screenRGB, particleRGB):
@@ -12,12 +23,6 @@ def explotar(radius, xPos, yPos, screenRGB, particleRGB):
             y = yPos + distance * math.sin(angle)
             screen.set_at((int(x), int(y)), (particleRGB[0], particleRGB[1], particleRGB[2]))
         pygame.display.flip()
-
-#Configuración
-windowSize = 500
-maxRandomExplosionRadius = 200
-windowColor = [0, 0, 0]
-maxRandomExplosions = 100
 
 
 #Preguntar cosas al usuario
@@ -94,6 +99,7 @@ for i in range(0, expTotal):
     print("-----------")
     print("\n")
 
+
 #Inicializar una ventana con la librería pygame
 pygame.init()
 screen = pygame.display.set_mode((windowSize, windowSize))
@@ -101,6 +107,5 @@ particles = [(random.gauss(0,.5), random.uniform(0,6.28318)) for i in range(2000
 
 
 #Inicia código a ejecutar en la ventana
-
 for i in range(0, expTotal):
     explotar(explosionRadius[i], positionsX[i], positionsY[i], windowColor, expColors[i])
