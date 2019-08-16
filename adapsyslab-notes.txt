@@ -1,0 +1,29 @@
+
+
+-----------------LABORATORIO DE SISTEMAS ADAPTATIVOS----------------
+
+
+------------------------------CONTACTO------------------------------
+saraelena@gmail.com
+discord: https://discord.gg/gpF8KX  canal: adaptativos
+--------------------------------------------------------------------
+
+---------------------------EQUIPO FOOBAR17--------------------------
+Carlos Miguel Morin Ramírez 	1683069 ITS 8182727376	
+Rogelio Zamora Narváez 		1683909 ITS 8112671220
+Christopher Brosig Garcia 	1838319 ITS 8671614415
+Sergio Iván Moreno Villarreal   1799567	ITS 8180175141
+Luis Fernando Mendez Montoya    1938331 ITS 8993392087
+--------------------------------------------------------------------
+
+----------------------------PONDERACIÓN-----------------------------
+Agrupamiento		20%
+Sistemas complejos	20%
+ACO			20%
+Agentes			20%
+Tareas			20%
+--------------------------------------------------------------------
+
+--> Las prácticas se suben a NEXUS. 
+--> En caso de proórroga, la calificación será sobre 80 PUNTOS.
+--> Usar lenguajes de ALTO NIVEL.
