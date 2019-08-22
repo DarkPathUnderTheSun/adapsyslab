@@ -1,9 +1,8 @@
-########################Configuración########################
+#####################   Configuración   #####################
 
-windowSize = 500
 maxRandomExplosionRadius = 200
-windowColor = [0, 0, 0]
 maxRandomExplosions = 100
+windowColor = [0,0,0]
 
 #############################################################
 
@@ -11,8 +10,20 @@ maxRandomExplosions = 100
 import math
 import random
 import pygame
+import sys
 
+if(len(sys.argv)) >= 2:
+    windowSize = int(sys.argv[1])
+else: 
+    windowSize = 100    
 
+if len(sys.argv) >= 5:
+    windowColor[0] = int(sys.argv[2])
+    windowColor[1] = int(sys.argv[3])    
+    windowColor[2] = int(sys.argv[4])
+else: 
+    windowColor = [0, 0, 0]
+    
 #Función de explosión
 def explotar(radius, xPos, yPos, screenRGB, particleRGB):
     for i in range(radius):
@@ -80,9 +91,9 @@ if randomRadiusToggle == "y":
 if randomRadiusToggle == "n":
     inverseFullManualToggle = input("Usar el mismo radio para todas las explosiones? (y/n) ")
     if inverseFullManualToggle == "y":
-        radius = int(input("Cuál será ese radio?"))
+        radius = int(input("Cuál será ese radio? "))
         for i in range(0, expTotal):
-            explosionRadius[i] = radius
+            explosionRadius.append(radius)
     if inverseFullManualToggle == "n":
         for i in range(0, expTotal):
             explosionRadius.append(int(input("Cuál debería ser el radio de la explosión " + str(i+1) + "? ")))
@@ -100,7 +111,7 @@ for i in range(0, expTotal):
     print("\n")
 
 
-#Inicializar una ventana con la librería pygame
+#Inicializar una ventana de pygame
 pygame.init()
 screen = pygame.display.set_mode((windowSize, windowSize))
 particles = [(random.gauss(0,.5), random.uniform(0,6.28318)) for i in range(2000)]
